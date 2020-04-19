@@ -1,0 +1,28 @@
+<!-- 6. Dynamic Pages with Templating -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather</title>
+    <link rel="icon" href="img/weather.png">
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p>Use this web to get your weather data !</p>
+        <form>
+            <input type="text" placeholder="location" />
+            <button>Search</button>
+        </form>
+        <p id="msg-1"></p>
+        <p id="msg-2"></p>
+    </div>
+
+    {{>footer}}
+    <script src="js/app.js"></script>
+</body>
+
+</html>
