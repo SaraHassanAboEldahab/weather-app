@@ -10,7 +10,7 @@ msg2.textContent = " "
 form.addEventListener("submit", (e) => {
     e.preventDefault()
     loc = search.value
-    fetch("http://localhost:3000/weather?address=" + loc).then((res) => { //that means fetch data from this url then run this function
+    fetch("/weather?address=" + loc).then((res) => { //that means fetch data from this url then run this function
         res.json().then((data) => { // this function will run when json data has arrived and passed
             if (data.error) {
                 msg1.textContent = data.error
