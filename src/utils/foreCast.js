@@ -9,7 +9,7 @@ const foreCast = (latitude, longitude, callback) => {
             callback("unable to find location !!", undefined)
 
         } else {
-            callback(undefined, `${body.daily.data[0].summary} , ${body.daily.data[0].icon} and It is currently ${body.currently.temperature} degree out.`)
+            callback(undefined, `${body.daily.data[0].summary} ,the temperature high is  ${body.daily.data[0].temperatureHigh} ,the temperature low is  ${body.daily.data[0].temperatureLow} and It is currently ${body.currently.temperature} degree out.`)
         }
     })
 }
