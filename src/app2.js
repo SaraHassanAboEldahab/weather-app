@@ -6,7 +6,7 @@ const geoCode = require("./utils/geoCode")
 const forecast = require("./utils/foreCast")
 
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 4000
 
 //define path for express config
 const viewsPath = path.join(__dirname, '../templates/views')
@@ -38,7 +38,7 @@ app.get("/help", (req, res) => {
 
 app.get("/about", (req, res) => {
     res.render("about", {
-        title: "About Page",
+        title: "About",
         name: "Sara"
     })
 })
@@ -49,7 +49,7 @@ app.get("/weather", (req, res) => {
             error: "please enter ur location"
         })
     }
-    //fel awl ama kont baktb l address 8alt kan by3ml crashing w msh bygybly l error l fel geoCode function l ktbah w kan l 7al eny 3amlt destructuring by adding {}
+    //fel awl ama kont baktb l address 8alt kan by3ml crashing w msh bygybly l error l fel geoCode function l ktbah w kan l 7al eny 3amlt destructuring by adding {} kda na 3amlt default values w hey undefined
     geoCode(address, (error, { latitude, longitude, place } = {}) => {
         if (error) {
             return res.send({ error })

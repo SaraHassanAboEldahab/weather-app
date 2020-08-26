@@ -1,4 +1,4 @@
-<!-- 6. Dynamic Pages with Templating -->
+<!-- 6. Creating a Search Form -->
 
 <!DOCTYPE html>
 <html>
@@ -10,9 +10,9 @@
 </head>
 
 <body>
+    {{>header}}
     <div class="main-content">
-        {{>header}}
-        <p>Use this web to get your weather data !</p>
+        <p>Enter your city name and you will get the weather data!</p>
         <form>
             <input type="text" placeholder="location" />
             <button>Search</button>

@@ -1,8 +1,7 @@
 body {
-    margin: 0 0 0 500px;
+    margin: 0 ;
     color: #333;
     font-family: Arial;
-    padding: 0 20px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -10,21 +9,35 @@ body {
 
 .main-content {
     flex-grow: 1;
+    text-align: center;
+    padding: 40px 0;
 }
-
-header {
-    margin: 20px auto;
+#msg-1{
+    color: tomato;
+    font-weight: bold;
+    margin: 30px 0;
 }
-
+#msg-2{
+    font-weight: bold;
+}
+header{
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    height: 35px;
+    border-bottom: solid 1px gray;
+}
 header h1 {
     color: darkcyan;
-    margin: 20px auto;
+   margin: 0;
 }
-
+.links{
+    margin-left: auto;
+}
 header a {
-    color: #888;
+    color: rgb(17, 193, 209);
     text-decoration: none;
-    margin-right: 20px;
+   margin-right: 30px;
 }
 
 footer {
@@ -32,9 +45,10 @@ footer {
     border-top: solid 0.5px gray;
     padding: 10px;
     margin: 20px 0 0 0;
-    width: fit-content;
 }
-
+footer h3{
+    text-align: center;
+}
 img {
     height: 250px;
     width: 250px;
@@ -44,6 +58,7 @@ img {
 input {
     border: 1px solid #ccc;
     padding: 8px;
+    margin: 30px 0;
 }
 
 button {
